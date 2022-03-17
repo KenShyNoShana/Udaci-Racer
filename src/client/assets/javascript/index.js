@@ -128,7 +128,6 @@ function runRace(raceID) {
 	{
 		console.log(error);
 	}
-
 }
 
 async function raceInfo (raceID, raceInterval)
@@ -158,7 +157,6 @@ async function raceInfo (raceID, raceInterval)
 		{
 			clearInterval(raceInterval) // to stop the interval from repeating
 			renderAt('#race', resultsView(raceInfo.positions)) // to render the results view
-
 		}
 }
 
@@ -452,8 +450,6 @@ async function getRace(id) {
 		console.log(error);
 	}
 }
-
-
 
 function startRace(id) {
 	return fetch(`${SERVER}/api/races/${id}/start`, {
