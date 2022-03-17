@@ -460,9 +460,9 @@ function startRace(id) {
 		method: 'POST',
 		...defaultFetchOpts(),
 	})
-	// Error occurs here
-	.then(res => res.json())
-	.then(res => console.log(res))
+	// Error occurs here (i guess because there is no information returned from this api call)
+	//.then(res => res.json())
+	//.then(res => console.log(res))
 	.catch(err => console.log("Problem with getRace request::", err))
 }
 
@@ -498,6 +498,5 @@ function accelerate(id) {
 		method: "POST",
 		...defaultFetchOpts()
 	})
-	//.then(data => data.json())  although the program is working,  this is causing the same error as the startRace() function
 	.catch(error => console.log(error))
 }
